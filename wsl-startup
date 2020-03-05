@@ -1,0 +1,8 @@
+#!/bin/bash
+
+scriptdir="$HOME/.wsl-startup/enabled"
+
+ls "$scriptdir" | sort -h | while read script; do
+  "$scriptdir/$script"
+done
+

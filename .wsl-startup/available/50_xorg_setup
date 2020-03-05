@@ -1,0 +1,4 @@
+#!/bin/bash
+
+export DOCKER_HOST=tcp://localhost:2375
+echo 'export DOCKER_HOST=tcp://localhost:2375' >> ~/.session_env

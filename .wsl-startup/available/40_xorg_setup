@@ -1,0 +1,5 @@
+#!/bin/bash
+export LIBGL_ALWAYS_INDIRECT=1
+export DISPLAY=:3
+echo "export LIBGL_ALWAYS_INDIRECT=1" >> ~/.session_env
+echo "export DISPLAY=:3" >> ~/.session_env

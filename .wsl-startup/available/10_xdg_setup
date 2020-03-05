@@ -1,0 +1,9 @@
+#!/bin/bash
+
+sudo mkdir -p /persist/run/user/$(id -u)
+sudo rm -Rf /run/user/$(id -u)
+sudo mkdir -p /run/user/$(id -u)
+sudo mount --bind /persist/run/user/$(id -u) /run/user/$(id -u)
+sudo chown $USER:$USER /run/user/$(id -u)
+echo "export XDG_RUNTIME_DIR=/run/user/$(id -u)" >> ~/.session_env
+
