@@ -11,8 +11,24 @@ Read more on my blog: https://blog.depau.eu/2020/03/05/installing-arch-wsl-manua
 - In `.wsl_startup/enabled`, create symlinks to all scripts you need in `../available`
 - Add `source ~/.session_env` to your `~/.bashrc`
 
-Make sure `wsl-startup` is run by the Windows scheduler at every login, so all programs
+Make sure `wsl-startup` is run by at every login, so all programs
 are started correctly (such as GNOME keyring and its SSH agent).
+
+To do that you can add a shortcut like so:
+
+1. Copy the `NoConsole.vbs` script to your Windows C: drive.
+2. Open Explorer to `%appdata%\Microsoft\Windows\Start Menu\Programs\Startup`.
+3. Right-click an empty space, "New" → "Shortcut".
+4. Set the location to the `NoConsole.vbs` script you just copied, and set the name
+   to whatever you want
+5. Right-click the newly created shortcut, open Properties
+6. In the "Target" field, at the end add:
+   ```
+   [SPACE] wsl -- /path/to/wsl-startup
+   ```
+
+The `NoConsole.vbs` script will let you run `wsl-startup` without showing a command
+prompt window.
 
 ## Xorg on WSL2
 
