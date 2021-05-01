@@ -24,7 +24,7 @@ To do that you can add a shortcut like so:
 5. Right-click the newly created shortcut, open Properties
 6. In the "Target" field, at the end add:
    ```
-   [SPACE] wsl -- /path/to/wsl-startup
+   [SPACE] wsl -- /linux/path/to/wsl-startup
    ```
 
 The `NoConsole.vbs` script will let you run `wsl-startup` without showing a command
